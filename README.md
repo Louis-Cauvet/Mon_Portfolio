@@ -6,7 +6,7 @@
 
 Ce portfolio a été réalisé de manière autodidacte, en exploitant toutes les connaissances en *HTML*, *CSS* et *Javascript* que j'ai accumulé et entrainé à travers différents projets ces derniers mois.
 
-Vous pourrez retrouver sur ce portfolio une petite préentation de mon parcours, mes différents projets personnels ainsi que les moyens de me contacter.
+Vous pourrez retrouver sur ce portfolio une petite présentation de mon parcours, mes différents projets personnels ainsi que les moyens de me contacter.
 
 
 ### Technologies ⚙️
