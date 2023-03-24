@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <base href="https://louis-cauvet.yj.lu/projets/Calculatrice/calculatrice.html">
+        <title>Calculatrice - Louis Cauvet</title>
+        <link rel="stylesheet" type="text/css" href="calculatrice_style.css">
+        <link rel="icon" type="image/x-icon" href="../../img/favicon louis cauvet.ico">
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="HTML,CSS,JS,calculatrice">
+        <meta name="description" content="Entrainement personnel au JavaScript consistant à développer une petite calculatrice ">
+        <meta name="author" content="Louis Cauvet">
+    </head>
+
+    <body>
+        <header>
+            <a id="retourPortfolio" href="../../portfolio.html">Cliquez sur ce lien pour revenir à mon portfolio</a>
+        </header>
+        <div id="titre">Calculatrice en ligne</div>
+        <div id="calculatrice">
+            <div id="zoneAffichage">
+                <div id="affichage">Saisir un calcul</div>
+            </div>
+            <div id="zoneTouches">
+                <div class="touche" id="toucheC" onclick="reinitialiserAffichage()">C</div>
+                <div class="touche" id="toucheParentheseOuvr" onclick="insererCaract('toucheParentheseOuvr')">(</div>
+                <div class="touche" id="toucheParentheseFerm" onclick="insererCaract('toucheParentheseFerm')">)</div>
+                <div class="touche" id="toucheSlash" onclick="insererCaract('toucheSlash')">/</div>
+                <div class="touche" id="touche7" onclick="insererCaract('touche7')">7</div>
+                <div class="touche" id="touche8" onclick="insererCaract('touche8')">8</div>
+                <div class="touche" id="touche9" onclick="insererCaract('touche9')">9</div>
+                <div class="touche" id="toucheEtoile" onclick="insererCaract('toucheEtoile')">*</div>
+                <div class="touche" id="touche4" onclick="insererCaract('touche4')">4</div>
+                <div class="touche" id="touche5" onclick="insererCaract('touche5')">5</div>
+                <div class="touche" id="touche6" onclick="insererCaract('touche6')">6</div>
+                <div class="touche" id="toucheMoins" onclick="insererCaract('toucheMoins')">-</div>
+                <div class="touche" id="touche1" onclick="insererCaract('touche1')">1</div>
+                <div class="touche" id="touche2" onclick="insererCaract('touche2')">2</div>
+                <div class="touche" id="touche3" onclick="insererCaract('touche3')">3</div>
+                <div class="touche" id="touchePlus" onclick="insererCaract('touchePlus')">+</div>
+                <div class="touche" id="touche0" onclick="insererCaract('touche0')">0</div>
+                <div class="touche" id="touchePoint" onclick="insererCaract('touchePoint')">.</div>
+                <div class="touche" id="toucheEgal" onclick="afficherResultat()">=</div>
+            </div>
+        </div>
+
+        <script src="calculatrice_script.js" type="text/javascript"></script>
+        <noscript>Désolé, votre navigateur ne prend pas en charge le Javascript</noscript>
+    </body>
+</html>
