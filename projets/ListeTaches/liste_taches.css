@@ -1,0 +1,260 @@
+:root{
+    --couleur_fond:  #0c7981;
+    --couleur_secondaire: #532558;
+    --couleur_fenetre : #f7f1f0;
+    --couleur_ecriture: #292c47;
+    --couleur_liens: #ca880d;
+    --couleur_rouge: #a10303;
+    --couleur_verte: #0d6409;
+    --police : Arial, Helvetica, sans-serif;
+    --policeTaches : 'poppins', sans-serif;
+}
+
+html{
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--couleur_fond);
+}
+
+body{ 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 320px;
+    margin: 0;
+}
+
+header{
+    width: 100%;
+    height: 40px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 4;
+}
+
+#retourPortfolio{
+    color: #182c63;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#retourPortfolio:hover{
+    text-decoration: underline;
+}
+
+#retourPortfolio:active{
+    color: #E26506;
+}
+
+#titreListeTaches{
+    padding-top: 20px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    color: var(--couleur_fenetre);
+    font: 30px var(--police); 
+}
+
+#zoneListeTaches{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    flex-grow: 1;
+}
+
+#listeTaches{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+    width: 85%;
+    max-width: 580px;
+    border-radius: 10px;
+    background-color: var(--couleur_fenetre);
+}
+
+#ligneSaisie{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+    width: 95%;
+    height: 35px;
+    margin-bottom: 5px;
+}
+
+#champSaisie{
+    flex-grow: 1;
+    height: 90%;
+    border-radius: 5px;
+    border: solid 1px var(--couleur_ecriture);
+    background-color: var(--couleur_taches);
+    font-size: 16px;
+}
+
+#champSaisie:focus{
+    outline-color: var(--couleur_fond);
+}
+
+#boutonAjouter{
+    width: 40px;
+    height: 100%;
+    background-color: var(--couleur_secondaire);
+    border-radius: 5px;
+    border-style: none;
+    font-size: 20px;
+    color: var(--couleur_fenetre);
+    cursor: pointer;
+}
+
+#boutonAjouter:active{
+    background-color: var(--couleur_liens);
+}
+
+.erreurFormulaire{
+    width: 95%;
+    color: var(--couleur_rouge);
+    font-family: var(--policeTaches);
+    font-size: 15px;
+    margin: 10px 0px;
+    text-align: center;
+}
+
+#zoneTaches{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+#zoneTache::-webkit-scrollbar{
+    width: 5px;
+    background-color: #e9e1e1;
+    border-radius: 5px;
+}
+
+.tache, .tacheFinie{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    margin-top: 12px;
+    padding: 8px 10px;
+    width: 90%;
+    height: auto;
+    background-color: #e9e1e1;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.tacheFinie{
+    color: var(--couleur_verte) !important;
+    text-decoration: line-through;
+}
+
+.tacheFinie > .zoneBoutonsTache{
+    justify-content: flex-end;
+    min-width: auto;
+}
+
+.intituleTache{
+    flex-grow: 1;
+    margin-right: 2px;
+    font-family: var(--policeTaches);
+    font-size: 16px;
+    color: var(--couleur_ecriture);
+}
+
+.zoneBoutonsTache{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 65px;
+    max-width: 65px;
+}
+
+.boutonMajTache, .boutonSupprimeTache{
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    padding-top: 2px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.boutonMajTache{
+    color: var(--couleur_verte);
+}
+
+.boutonSupprimeTache{
+    color: var(--couleur_rouge);
+}
+
+.boutonMajTache:hover, .boutonSupprimeTache:hover{
+    font-size: 24px;
+    text-shadow: 2px 2px 5px var(--couleur_ecriture);  
+}
+
+.boutonMajTache:active, .boutonSupprimeTache:active{
+    transition: none;
+    color: var(--couleur_ecriture);  
+}
+
+#zoneDeconnexion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+}
+
+#boutonDeconnexion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    background-color: var(--couleur_secondaire);
+    color: var(--couleur_fenetre);
+    font-size: 16px;
+    font-family: var(--police);
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0px 10px;
+    cursor: pointer;
+}
+
+#boutonDeconnexion:active{
+   background-color: var(--couleur_liens);
+}
+
+@media only screen and (min-width: 1024px) {
+
+    #zoneTaches{
+        max-height: 445px;
+    }
+
+}
+
+@media only screen and (min-height: 865px) {
+
+    #zoneTaches{
+        max-height: 650px;
+    }
+
+}

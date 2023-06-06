@@ -1,0 +1,260 @@
+:root{
+    --couleur_fond:  #0c7981;
+    --couleur_secondaire: #532558;
+    --couleur_fenetre : #f7f1f0;
+    --couleur_ecriture: #292c47;
+    --couleur_liens: #ca880d;
+    --couleur_rouge: #a10303;
+    --couleur_verte: #0d6409;
+    --police : Arial, Helvetica, sans-serif;
+}
+
+html{
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--couleur_fond);
+}
+
+body{ 
+    min-height: 100vh;
+    min-width: 320px;
+    margin: 0;
+}
+
+header{
+    width: 100%;
+    height: 40px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 4;
+}
+
+#retourPortfolio{
+    color: #182c63;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#retourPortfolio:hover{
+    text-decoration: underline;
+}
+
+#retourPortfolio:active{
+    color: #E26506;
+}
+
+#zoneConnexion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+#zoneInscription{
+    padding: 50px 0px 30px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+#fenetreConnexion, #fenetreInscription, #zoneVerifMdp{
+    width: 72%;
+    max-width: 400px;
+    height: auto;
+    background-color: var(--couleur_fenetre);
+    border-radius: 10px;
+    padding: 5px 15px;
+    box-shadow: 12px 12px 10px #000000;
+    transition: all 0.5s linear;
+}
+
+#zoneVerifMdp{
+    box-shadow: none !important;
+    background-color: #ede5e4 !important;
+    padding: 15px 15px !important;
+    font-weight: bold;
+}
+
+#formulaireInscription{
+    position: relative;
+}
+
+#regroupementFormulaire{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family:var(--police);
+    color: var(--couleur_ecriture);
+    margin: 10px 0px 15px;
+}
+
+#titreFormulaire{
+    font-size: 25px; 
+}
+
+#succesInscription{
+    color: var(--couleur_verte);
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.erreurFormulaire{
+    color: var(--couleur_rouge);
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.labelFormulaire{
+    font-size: 18px;
+}
+
+.champFormulaire{
+    margin-bottom: 10px;
+    width: 97%;
+    height: 22px;
+    font-size: 16px;
+    border: solid 2px var(--couleur_ecriture);
+}
+
+.champFormulaire:focus{
+    outline-color: var(--couleur_fond);
+}
+
+.regroupementMdp{
+    position: relative;
+    width: 100%;
+}
+
+.oeil{
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    z-index: 2;
+    background-color: white;
+    cursor: pointer;
+}
+
+.fa-eye{
+    color: var(--couleur_secondaire);
+}
+
+#boutonValidationConnexion, #boutonValidationInscription{
+    margin: 10px 0px 5px;
+    width: 100%;
+    height: 35px;
+    background-color: var(--couleur_secondaire);
+    font-size: 18px;
+    border: none;
+    border-radius: 3px;
+    color: var(--couleur_fenetre);
+    cursor: pointer;
+}
+
+#boutonValidationInscription{
+    display: none;
+}
+
+#boutonValidationConnexion:active,  #boutonValidationInscription:active{
+    background-color: var(--couleur_liens);
+}
+
+#texteInscription, #texteConnexion{
+    font-family: var(--police);
+    color: var(--couleur_ecriture);
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#lienInscription, #lienConnexion{
+    color: var(--couleur_fond);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#lienInscription:hover, #lienConnexion:hover{
+    text-decoration: underline;
+}
+
+#lienInscription:active, #lienConnexion:active{
+    color: var(--couleur_liens);
+}
+
+#infosDonnees{
+    font-size: 15px;
+    font-family: var(--police);
+    color: var(--couleur_ecriture);
+    width: 100%;
+    text-align: justify;
+}
+
+.fa-exclamation-circle{
+    font-size: 18px !important;
+    margin-right: 5px;
+}
+
+#titreVerifMdp{
+    font-family: var(--police);
+    font-size: 18px;
+    color: var(--couleur_ecriture);
+    margin-bottom: 10px;
+}
+
+#criteresMdp{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.critere{
+    font-family: var(--police);
+    font-size: 16px;
+}
+
+.critInvalide{
+    color: var(--couleur_rouge);
+}
+
+.critInvalide::before{
+    content: "✖";
+    margin-right: 10px;
+}
+
+.critValide{
+    color: var(--couleur_verte);
+}
+
+.critValide::before{
+    content: "✔";
+    margin-right: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+
+    #fenetreConnexion{
+        width: 75%;
+    }
+
+    #zoneInscription{
+        padding: 0px;
+    }
+
+    .oeil{
+        right: 15px;
+    }
+
+}
